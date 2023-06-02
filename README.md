@@ -4,6 +4,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/bamsnap/bamsnap/develop.svg)](https://codecov.io/github/bamsnap/bamsnap?branch=develop)-->
 
 BamSnap: a lightweight command-based visualization tool for sequencing reads in BAM files
+In this fork, the problems associated with short references have been removed.
 
 <!--<img src="https://raw.githubusercontent.com/parklab/bamsnap/master/data/ex1/snapfiles/snap_test11.bam_1_715347-715348.png" height=128px width=405px>-->
 
