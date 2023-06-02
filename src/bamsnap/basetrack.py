@@ -8,8 +8,9 @@ class BaseTrack():
     def __init__(self, chrom, spos, epos, refseq, xscale, w):
         self.chrom = chrom
         self.nchrom = chrom.replace('chr', '')
-        self.spos = spos
-        self.epos = epos
+        self.spos = 500
+        self.epos = max(refseq.keys()) - 500
+        print(self.spos, self.epos)
         self.w = w
         self.h = 0
         self.refseq = refseq

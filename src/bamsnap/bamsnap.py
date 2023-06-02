@@ -583,11 +583,12 @@ class ReferenceSequence():
         return refseq
 
     def get_refseq_from_localfasta(self, pos1):
-        spos = pos1['g_spos']-self.opt['margin'] - 500
-        epos = pos1['g_epos']+self.opt['margin'] + 1 + 500
-        seq = self.get_refseq_from_fasta(pos1['chrom'], spos, epos, self.opt['ref_index_rebuild'])
+        seq = self.get_refseq_from_fasta(pos1['chrom'], None, None, self.opt['ref_index_rebuild'])
+        spos = 0
+        epos = len(seq) - 1
         i = 0
         refseq = {}
+        print('WW')
         for gpos in range(spos, epos):
             refseq[gpos+1] = seq[i]
             i += 1
@@ -600,5 +601,5 @@ class ReferenceSequence():
             arr = c1.split(' ')
             tchrom = arr[0]
             fastachrommap[tchrom] = c1
-        refseq = f[fastachrommap[chrom]][spos:epos+1]
+        refseq = f[fastachrommap[chrom]][0:-1]
         return str(refseq)
