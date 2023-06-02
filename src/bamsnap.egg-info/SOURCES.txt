@@ -1,6 +1,6 @@
+LICENSE
 MANIFEST.in
 README.md
-setup.cfg
 setup.py
 src/bamsnap/__init__.py
 src/bamsnap/_logging.py
@@ -41,3 +41,8 @@ src/bamsnap/templates/sample_temp.html
 src/bamsnap/templates/template.html
 src/bamsnap/templates/variant_list.html
 src/bamsnap/templates/variant_temp.html
+tests/test_basetrack.py
+tests/test_run.py
+tests/test_scale.py
+tests/test_util.py
+tests/test_zip.py

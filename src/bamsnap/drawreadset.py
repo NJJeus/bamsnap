@@ -58,7 +58,7 @@ class CoveragePlot():
                 y2 = round(h - (cov / max_cov * h), 0)
                 x1 = self.xscale.xmap[posi]['spos']
                 x2 = self.xscale.xmap[posi]['epos']
-                dr.rectangle([(x1, y1), (x2, y2)], fill=getrgb(self.coverage_color), outline=getrgb(self.coverage_color, 15), width=1)
+                dr.rectangle([(x1, y1), (max(x1, x2), max(y1, y2))], fill=getrgb(self.coverage_color), outline=getrgb(self.coverage_color, 15), width=1)
                 # print(posi, cov, base_composition, len(base_composition.keys()), max_cov, refseq[posi])
                 if len(base_composition.keys()) > 1:
                     # print(posi, cov, base_composition, max_cov)
